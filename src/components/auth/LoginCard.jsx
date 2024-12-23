@@ -101,7 +101,7 @@ const LoginCard = () => {
             <div className="flex-auto p-6">
               <div className="mb-10 flex flex-shrink-0 flex-grow-0 items-center justify-center">
                 <span className="flex-shrink-0 text-3xl font-black tracking-tight text-indigo-500">
-                  Blog Application
+                  BlogSpot
                 </span>
               </div>
 

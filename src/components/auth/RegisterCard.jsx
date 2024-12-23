@@ -52,7 +52,7 @@ const RegisterCard = () => {
                                     className="flex cursor-pointer items-center gap-2 text-indigo-500 no-underline hover:text-indigo-500"
                                 >
                                     <span className="flex-shrink-0 text-3xl font-black tracking-tight opacity-100">
-                                        Blog Application
+                                        BlogSpot
                                     </span>
                                 </a>
                             </div>
