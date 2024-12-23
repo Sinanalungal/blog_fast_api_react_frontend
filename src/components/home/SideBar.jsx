@@ -89,7 +89,7 @@ export function SidebarDemo({ children }) {
   return (
     <div
       className={cn(
-        "rounded-md flex font-roboto flex-col md:flex-row bg-gray-100 w-full flex-1 mx-auto border border-neutral-200 overflow-hidden",
+        "rounded-md flex font-roboto 2xl:container flex-col md:flex-row bg-gray-100 w-full flex-1 mx-auto border border-neutral-200 overflow-hidden",
         "h-screen"
       )}
     >
@@ -168,7 +168,7 @@ export const Logo = () => {
         animate={{ opacity: 1 }}
         className="font-bold text-xl text-black whitespace-pre"
       >
-        Blog Application
+        BlogSpot
       </motion.span>
     </Link>
   );

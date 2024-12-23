@@ -1,5 +1,3 @@
-import axios from 'axios';
-import { BASE_URL } from '../../constents';
 import axiosInstance from '../../axios/axiosIntrecepters';
 
 
