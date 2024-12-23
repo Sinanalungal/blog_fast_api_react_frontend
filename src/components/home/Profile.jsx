@@ -15,7 +15,9 @@ const Profile = () => {
   // Initialize formik after user data is available
   const formik = useFormik({
     initialValues: {
-      profileImage: user.profile_picture? `${BASE_URL}${user.profile_picture}`:"",
+      profileImage: user.profile_picture
+        ? `${BASE_URL}${user.profile_picture}`
+        : "",
       username: user?.username || "",
       email: user?.email || "",
     },
@@ -52,7 +54,7 @@ const Profile = () => {
         username: user.username || "",
         email: user.email || "",
       });
-      
+
       // No need to manually set formik values here due to enableReinitialize
     }
   }, [user]);

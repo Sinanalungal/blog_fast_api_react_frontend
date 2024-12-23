@@ -38,7 +38,7 @@ const RegisterCard = () => {
 
     return (
         <>
-           {!user ? <div className="flex min-h-screen w-full items-center justify-center text-gray-600 p-4">
+           {!user ? <div className="flex min-h-screen w-full font-roboto items-center justify-center text-gray-600 p-4">
                 <div className="relative w-full max-w-md">
                     <div className="hidden sm:block h-56 w-56 text-indigo-300 absolute -left-20 -top-20">
                     </div>

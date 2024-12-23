@@ -14,6 +14,7 @@ import ConfirmationModal from "./LogoutModal";
 import { toast } from "react-toastify";
 import { logout } from "../../services/api/logout.js";
 import { UserContext } from "./userContextProvider.jsx";
+import { BASE_URL } from "../../constents.js";
 
 export function SidebarDemo({ children }) {
   const [data, setData] = useState({
@@ -88,7 +89,7 @@ export function SidebarDemo({ children }) {
   return (
     <div
       className={cn(
-        "rounded-md flex flex-col md:flex-row bg-gray-100 w-full flex-1 mx-auto border border-neutral-200 overflow-hidden",
+        "rounded-md flex font-roboto flex-col md:flex-row bg-gray-100 w-full flex-1 mx-auto border border-neutral-200 overflow-hidden",
         "h-screen"
       )}
     >
@@ -126,8 +127,8 @@ export function SidebarDemo({ children }) {
                 href: "#",
                 icon: (
                   <img
-                    src={data.profileImage}
-                    className="h-7 w-7 flex-shrink-0 rounded-full"
+                    src={`${BASE_URL}${data.profileImage}`}
+                    className="h-7 w-7 flex-shrink-0 object-cover rounded-full"
                     width={50}
                     height={50}
                     alt="Avatar"

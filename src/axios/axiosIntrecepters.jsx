@@ -26,7 +26,7 @@ axiosInstance.interceptors.response.use(
     console.log(error,'error in interceptor');
 
     // Check if the error is due to an expired access token
-    if (error.response.status === 403 && !originalRequest._retry) {
+    if (error.response.status == 403 && !originalRequest._retry) {
       originalRequest._retry = true;
 
       try {

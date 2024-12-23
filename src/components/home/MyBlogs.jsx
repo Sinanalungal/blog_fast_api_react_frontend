@@ -4,6 +4,7 @@ import EditPost from './MyBlogEdit';
 import axiosInstance from '../../axios/axiosIntrecepters';
 import Modal from 'react-modal';
 import { toast } from 'react-toastify';
+import { BASE_URL } from '../../constents';
 
 Modal.setAppElement('#portal-root');
 
@@ -20,7 +21,7 @@ const MyBlogs = () => {
         try {
             const response = await axiosInstance.get(`get-my-blogs/`);
             console.log("API Response:", response.data);
-            setBlogPosts(response.data.results);
+            setBlogPosts(response.data);
         } catch (error) {
             console.error("Error fetching blogs:", error);
             toast.error("Failed to load blog posts.");
@@ -81,13 +82,13 @@ const MyBlogs = () => {
             ) : (
                 <>
                     <h1 className="text-3xl font-bold text-center pb-10">My Blogs</h1>
-                    {blogPosts.length === 0 && <p className="text-center">No blog posts available.</p>}
+                    {blogPosts?.length === 0 && <p className="text-center">No blog posts available.</p>}
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {blogPosts.map((post) => (
+                        {blogPosts?.map((post) => (
                             <div key={post.id} className="bg-white shadow-md rounded-lg overflow-hidden transition hover:shadow-lg">
                                 {post.image && (
-                                    <img src={post.image} alt={post.title} className="w-full h-40 object-cover" />
+                                    <img src={`${BASE_URL}${post.image}`} alt={post.title} className="w-full h-40 object-cover" />
                                 )}
                                 <div className="p-4">
                                     <div className="flex justify-between items-start mb-2">

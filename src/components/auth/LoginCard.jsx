@@ -10,7 +10,7 @@ import { UserContext } from "../home/userContextProvider";
 // Error Fallback Component
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
-    <div className="h-screen flex items-center justify-center">
+    <div className="h-screen flex items-center font-roboto justify-center">
       <div className="text-red-500 p-4 rounded-lg border border-red-200 bg-red-50">
         <h2 className="font-semibold mb-2">Something went wrong:</h2>
         <pre className="text-sm">{error.message}</pre>
@@ -27,7 +27,7 @@ function ErrorFallback({ error, resetErrorBoundary }) {
 
 // Loading Component
 const LoadingSpinner = () => (
-  <div className="h-screen flex items-center justify-center">
+  <div className="h-screen flex items-center font-roboto justify-center">
     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-500"></div>
   </div>
 );
@@ -91,7 +91,7 @@ const LoginCard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen font-roboto bg-gray-50">
       <div className="flex min-h-screen w-full items-center justify-center text-gray-600">
         <div className="relative">
           <div className="hidden sm:block h-56 w-56 text-indigo-300 absolute -left-20 -top-20"></div>

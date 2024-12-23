@@ -19,7 +19,7 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Suspense fallback={
-				<div className="h-screen flex justify-center items-center">
+				<div className="h-screen flex font-roboto justify-center items-center">
 					<div >Loading...
 					</div>
 				</div>}>
